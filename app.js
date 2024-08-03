@@ -19,10 +19,10 @@ const app = Vue.createApp({
       this.counter = this.counter - num;
     },
     setName(event, lastname) {
-      this.name = event.target.value + " " + lastname;
+      this.name = event.target.value;
     },
-    submitForm() {
-      alert("Form by default submission behaviour is prevented.");
+    resetInput() {
+      this.name = "";
     },
   },
 });
