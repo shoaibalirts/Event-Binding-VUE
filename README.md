@@ -2,12 +2,12 @@
 
 <ul>
     <li>
-        # <button v-on:click="add()">Add</button>" #
+        v-on:click="add()">
     </li>
     <li>
-        "<input type="text" v-on:input="setName" /> // onChange, keyup, keydown"
+        v-on:input="setName" // onChange, keyup, keydown"
     </li>
     <li>
-        "<input type="text" v-on:input="setName($event, 'Ali')" /> // first argument event"
+        v-on:input="setName($event, 'Ali')" // first argument event"
     </li>
 </ul>
