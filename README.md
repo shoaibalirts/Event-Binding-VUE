@@ -2,12 +2,13 @@
 
 <ul>
     <li>
-        v-on:click="add()">
+        button v-on:click="add()">
     </li>
     <li>
-        v-on:input="setName" // onChange, keyup, keydown"
+        input v-on:input="setName" // onChange, keyup, keydown"
     </li>
     <li>
-        v-on:input="setName($event, 'Ali')" // first argument event"
+        input v-on:input="setName($event, 'Ali')" // first argument event"
     </li>
+        form v-on:submit.prevent="submitForm" // do not need to call event.preventDefault due to prevent event modifier
 </ul>
