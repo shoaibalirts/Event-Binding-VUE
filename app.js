@@ -4,17 +4,27 @@ const app = Vue.createApp({
       counter: 0,
       name: "",
       confirmedName: "",
+      fullname: "",
     };
   },
-  computed: {
-    fullname() {
-      console.log("Running again");
-
-      if (this.name === "") {
-        return "";
+  watch: {
+    name(value) {
+      // value is a latest value
+      if (value === "") {
+        this.fullname = "";
+      } else {
+        this.fullname = value + " " + "Ali";
       }
-      return this.name + " " + "Ali";
     },
+  },
+  computed: {
+    // fullname() {
+    //   console.log("Running?");
+    //   if (this.name === "") {
+    //     return "";
+    //   }
+    //   return this.name + " " + "Ali";
+    // },
   },
   methods: {
     outputFullName() {
