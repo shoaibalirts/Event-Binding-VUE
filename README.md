@@ -2,7 +2,7 @@
 
 <ul>
     <li>
-        "<button v-on:click="add()">Add</button>"
+        # <button v-on:click="add()">Add</button>" #
     </li>
     <li>
         "<input type="text" v-on:input="setName" /> // onChange, keyup, keydown"
