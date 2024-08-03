@@ -3,9 +3,13 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: "",
+      confirmedName: "",
     };
   },
   methods: {
+    confirmInput() {
+      this.confirmedName = this.name;
+    },
     add(num) {
       console.log("clicked");
       this.counter = this.counter + num;
