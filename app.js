@@ -10,12 +10,12 @@ const app = Vue.createApp({
   },
   watch: {
     counter(latestValue, oldValue) {
-      setTimeout(() => {
-        if (latestValue > 50) {
-          this.counter = 0;
-        }
-      }, 2000);
-
+      if (latestValue > 50) {
+        const that = this;
+        setTimeout(() => {
+          that.counter = 0;
+        }, 2000);
+      }
       console.log(this.counter);
     },
     // name(value) {
