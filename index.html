@@ -22,7 +22,7 @@
       <button @click="remove(5)">Remove</button>
       <p v-once>Starting Counter: {{counter}}</p>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-model="name" />
+      <input type="text" :value="" v-model="name" />
       <input type="text" v-model="lastname" />
 
       <button @click="resetInput">Reset Input</button>
