@@ -3,28 +3,38 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: "",
+      lastname: "",
       confirmedName: "",
-      fullname: "",
+      // fullname: "",
     };
   },
   watch: {
-    name(value) {
-      // value is a latest value
-      if (value === "") {
-        this.fullname = "";
-      } else {
-        this.fullname = value + " " + "Ali";
-      }
+    counter(latestValue, oldValue) {
+      setTimeout(() => {
+        if (latestValue > 50) {
+          this.counter = 0;
+        }
+      }, 2000);
+
+      console.log(this.counter);
     },
+    // name(value) {
+    //   // value is a latest value
+    //   if (value === "") {
+    //     this.fullname = "";
+    //   } else {
+    //     this.fullname = value + " " + "Ali";
+    //   }
+    // },
   },
   computed: {
-    // fullname() {
-    //   console.log("Running?");
-    //   if (this.name === "") {
-    //     return "";
-    //   }
-    //   return this.name + " " + "Ali";
-    // },
+    fullname() {
+      console.log("Running?");
+      if (this.name === "" || this.lastname === "") {
+        return "";
+      }
+      return this.name + " " + this.lastname;
+    },
   },
   methods: {
     outputFullName() {
@@ -51,6 +61,7 @@ const app = Vue.createApp({
     },
     resetInput() {
       this.name = "";
+      this.lastname = "";
     },
   },
 });
